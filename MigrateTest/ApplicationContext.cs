@@ -13,13 +13,18 @@ namespace Excel
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<msg> msg { get; set; }
+        /*public DbSet<msg> msg { get; set; }
         public DbSet<DocumentRouteStepT> DocumentRouteStepT { get; set; }
         public DbSet<TestOrderLineT> TestOrderLineT { get; set; }
         public DbSet<Desc> Desc { get; set; }
         public DbSet<BaseGuid> BaseGuid { get; set; }
         public DbSet<Sample> Sample { get; set; }
-        public DbSet<TestOrder> TestOrder { get; set; }
+        public DbSet<TestOrder> TestOrder { get; set;*/
+        public DbSet<Gosts> Gosts { get; set; }
+        public DbSet<Pokazatels> Pokazatels { get; set; }
+        public DbSet<EIs> EIs { get; set; }
+        public DbSet<TypeOfTests> TypeOfTests { get; set; }
+        public DbSet<MoreData> MoreData { get; set; }
 
         public ApplicationContext()
         {
@@ -27,10 +32,57 @@ namespace Excel
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Excel;Username=postgres;Password=123123");
+            optionsBuilder.UseNpgsql("Host=10.241.0.164;Port=5432;Database=limsDB;Username=postgres;Password=KbvcRb,thcnfkm");
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
     }
+    [Table("TypeOfTests")]
+    public class TypeOfTests
+    {
+        [Key]
+        public int Id { get; set; }
+        [Column("TypeOfTest")]
+        public string TypeOfTest { get; set; }
+    }
+
+    public class MoreData
+    {
+        public int Id { get; set; }
+        public int PokazatelsId { get; set; }
+        public string Data { get; set; }
+
+        public MoreData(int pokazatelsId, string data)
+        {
+            PokazatelsId = pokazatelsId;
+            Data = data;
+        }
+    }
+    
+    public class Gosts
+    {
+        public int Id { get; set; }
+        public string Gost { get; set; }
+        public int TypeOfTestsId { get; set; }
+    }
+    
+    public class Pokazatels
+    {
+        public int Id { get; set; }
+        public int GostsId { get; set; }
+        public string Pokazatel { get; set; }
+
+        public ObservableCollection<EIs> EIs { get; set; }
+
+    }
+    
+    public class EIs
+    {
+        public int Id { get; set; }
+        public int PokazatelsId { get; set; }
+        public string EI { get; set; }
+        public string? MainEI { get; set; }
+    }
+
     [Table("BaseGuid")]
     public class BaseGuid
     {
