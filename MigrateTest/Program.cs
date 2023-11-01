@@ -4,6 +4,8 @@ ApplicationContext db = new ApplicationContext();
 
 
 /*List<Gosts> list = new List<Gosts>();
+
+
 Gosts g1 = new Gosts();
 g1.Gost = "ГОСТ 1497-84";
 g1.TypeOfTestsId = 19;
@@ -102,7 +104,7 @@ g24.TypeOfTestsId = 3;
 list.Add(g24);
 Gosts g25 = new Gosts();
 g25.Gost = "ГОСТ 10243-75";
-g25.TypeOfTestsId = 0;
+g25.TypeOfTestsId = 34;
 list.Add(g25);
 Gosts g26 = new Gosts();
 g26.Gost = "ГОСТ 11878-66";
@@ -154,14 +156,70 @@ g203.Gost = "ASTM A262";
 g203.TypeOfTestsId = 12;
 list.Add(g203);
 
+Gosts g204 = new Gosts();
+g204.Gost = "ISO 3651-2:1998";
+g204.TypeOfTestsId = 10;
+list.Add(g204);
+
+Gosts g205 = new Gosts();
+g205.Gost = "ISO 3651-2:1998";
+g205.TypeOfTestsId = 11;
+list.Add(g205);
+
+Gosts g206 = new Gosts();
+g206.Gost = "ISO 3651-2:1998";
+g206.TypeOfTestsId = 12;
+list.Add(g206);
+
+Gosts g39 = new Gosts();
+g39.Gost = "ГОСТ 6032-2017";
+g39.TypeOfTestsId = 35;
+list.Add(g39);
+
+Gosts g40 = new Gosts();
+g40.Gost = "ГОСТ 6032-2017";
+g40.TypeOfTestsId = 36;
+list.Add(g40);
+
+Gosts g41 = new Gosts();
+g41.Gost = "РД 2.200.15-90";
+g41.TypeOfTestsId = 35;
+list.Add(g41);
+
+Gosts g42 = new Gosts();
+g42.Gost = "РД 2.200.15-90";
+g42.TypeOfTestsId = 36;
+list.Add(g42);
+
+Gosts g43 = new Gosts();
+g43.Gost = "ASTM A262";
+g43.TypeOfTestsId = 35;
+list.Add(g43);
+
+Gosts g44 = new Gosts();
+g44.Gost = "ASTM A262";
+g44.TypeOfTestsId = 36;
+list.Add(g44);
+
+Gosts g45 = new Gosts();
+g45.Gost = "ISO 3651-2:1998";
+g45.TypeOfTestsId = 35;
+list.Add(g45);
+
+Gosts g46 = new Gosts();
+g46.Gost = "ISO 3651-2:1998";
+g46.TypeOfTestsId = 36;
+list.Add(g46);
+
+
 
 foreach (var a in list)
     db.Gosts.Add(a);*/
 
-List<Pokazatels> list1 = new List<Pokazatels>();
+/*List<Pokazatels> list1 = new List<Pokazatels>();
 
 
-/*Pokazatels p21 = new Pokazatels();
+Pokazatels p21 = new Pokazatels();
 p21.GostsId = 1;
 p21.Pokazatel = "Предел текучести";
 list1.Add(p21);
@@ -445,9 +503,9 @@ list1.Add(p13);
 Pokazatels p14 = new Pokazatels();
 p14.GostsId = 32;
 p14.Pokazatel = "Межкристаллитная коррозия";
-list1.Add(p14);*/
+list1.Add(p14);
 
-/*Pokazatels p7123 = new Pokazatels();
+Pokazatels p7123 = new Pokazatels();
 p7123.GostsId = 25;
 p7123.Pokazatel = "Предел текучести";
 list1.Add(p7123);
@@ -537,6 +595,91 @@ p71247.GostsId = 25;
 p71247.Pokazatel = "Содержание ферритной фазы";
 list1.Add(p71247);
 
+Pokazatels p71248 = new Pokazatels();
+p71248.GostsId = 25;
+p71248.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p71248);
+
+Pokazatels p71249 = new Pokazatels();
+p71249.GostsId = 25;
+p71249.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p71249);
+
+Pokazatels p71250 = new Pokazatels();
+p71250.GostsId = 25;
+p71250.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p71250);
+
+Pokazatels p80 = new Pokazatels();
+p80.GostsId = 33;
+p80.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p80);
+
+Pokazatels p81 = new Pokazatels();
+p81.GostsId = 34;
+p81.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p81);
+
+Pokazatels p82 = new Pokazatels();
+p82.GostsId = 35;
+p82.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p82);
+
+Pokazatels p83 = new Pokazatels();
+p83.GostsId = 36;
+p83.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p83);
+
+Pokazatels p84 = new Pokazatels();
+p84.GostsId = 37;
+p84.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p84);
+
+Pokazatels p85 = new Pokazatels();
+p85.GostsId = 38;
+p85.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p85);
+
+Pokazatels p86 = new Pokazatels();
+p86.GostsId = 39;
+p86.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p86);
+
+Pokazatels p87 = new Pokazatels();
+p87.GostsId = 40;
+p87.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p87);
+
+Pokazatels p88 = new Pokazatels();
+p88.GostsId = 41;
+p88.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p88);
+
+Pokazatels p89 = new Pokazatels();
+p89.GostsId = 42;
+p89.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p89);
+
+Pokazatels p90 = new Pokazatels();
+p90.GostsId = 43;
+p90.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p90);
+
+Pokazatels p91 = new Pokazatels();
+p91.GostsId = 44;
+p91.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p91);
+
+Pokazatels p92 = new Pokazatels();
+p92.GostsId = 45;
+p92.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p92);
+
+Pokazatels p93 = new Pokazatels();
+p93.GostsId = 46;
+p93.Pokazatel = "Межкристаллитная коррозия";
+list1.Add(p93);
+
 
 
 foreach (var item in list1)
@@ -544,8 +687,8 @@ foreach (var item in list1)
     db.Pokazatels.Add(item);
 }*/
 
-List<EIs> list2 = new List<EIs>();
-/*EIs e112 = new EIs();
+/*List<EIs> list2 = new List<EIs>();
+EIs e112 = new EIs();
 e112.PokazatelsId = 1;
 e112.EI = "Н/мм2";
 list2.Add(e112);
@@ -920,247 +1063,48 @@ e44.PokazatelsId = 52;
 e44.EI = "НОМ";
 list2.Add(e44);
 
-EIs e45 = new EIs();
-e45.PokazatelsId = 53;
-e45.EI = "Склонен";
-list2.Add(e45);
 
-EIs e4512 = new EIs();
-e4512.PokazatelsId = 53;
-e4512.EI = "Не склонен";
-list2.Add(e4512);
-
-EIs e46 = new EIs();
-e46.PokazatelsId = 54;
-e46.EI = "Склонен";
-list2.Add(e46);
-
-EIs e4м6 = new EIs();
-e4м6.PokazatelsId = 54;
-e4м6.EI = "Не склонен";
-list2.Add(e4м6);
-
-EIs e47 = new EIs();
-e47.PokazatelsId = 55;
-e47.EI = "Склонен";
-list2.Add(e47);
-
-EIs e4714 = new EIs();
-e4714.PokazatelsId = 55;
-e4714.EI = "Не склонен";
-list2.Add(e4714);
-
-EIs e48 = new EIs();
-e48.PokazatelsId = 56;
-e48.EI = "Склонен";
-list2.Add(e48);
-
-EIs e48167 = new EIs();
-e48167.PokazatelsId = 56;
-e48167.EI = "Не склонен";
-list2.Add(e48167);
-
-EIs e49 = new EIs();
-e49.PokazatelsId = 57;
-e49.EI = "Склонен";
-list2.Add(e49);
-
-EIs eп49 = new EIs();
-eп49.PokazatelsId = 57;
-eп49.EI = "Не склонен";
-list2.Add(eп49);
-
-EIs e50 = new EIs();
-e50.PokazatelsId = 58;
-e50.EI = "Склонен";
-list2.Add(e50);
-
-EIs e505 = new EIs();
-e505.PokazatelsId = 58;
-e505.EI = "Не склонен";
-list2.Add(e505);*/
-
-/*EIs ed51 = new EIs();
-ed51.PokazatelsId = 59;
-ed51.EI = "Склонен";
-list2.Add(ed51);
-
-EIs ed52 = new EIs();
-ed52.PokazatelsId = 59;
-ed52.EI = "Не склонен";
-list2.Add(ed52);
-
-EIs ed53 = new EIs();
-ed53.PokazatelsId = 60;
-ed53.EI = "Склонен";
-list2.Add(ed53);
-
-EIs ed54 = new EIs();
-ed54.PokazatelsId = 60;
-ed54.EI = "Не склонен";
-list2.Add(ed54);
-
-EIs ed55 = new EIs();
-ed55.PokazatelsId = 61;
-ed55.EI = "Склонен";
-list2.Add(ed55);
-
-EIs ed56 = new EIs();
-ed56.PokazatelsId = 61;
-ed56.EI = "Не склонен";
-list2.Add(ed56);
-
-EIs ed57 = new EIs();
-ed57.PokazatelsId = 62;
-ed57.EI = "Склонен";
-list2.Add(ed57);
-
-EIs ed58 = new EIs();
-ed58.PokazatelsId = 62;
-ed58.EI = "Не склонен";
-list2.Add(ed58);
-
-EIs ed59 = new EIs();
-ed59.PokazatelsId = 63;
-ed59.EI = "Склонен";
-list2.Add(ed59);
-
-EIs ed60 = new EIs();
-ed60.PokazatelsId = 63;
-ed60.EI = "Не склонен";
-list2.Add(ed60);
-
-EIs ed61 = new EIs();
-ed61.PokazatelsId = 64;
-ed61.EI = "Склонен";
-list2.Add(ed61);
-
-EIs ed62 = new EIs();
-ed62.PokazatelsId = 64;
-ed62.EI = "Не склонен";
-list2.Add(ed62);
-
-EIs ed63 = new EIs();
-ed63.PokazatelsId = 65;
-ed63.EI = "Склонен";
-list2.Add(ed63);
-
-EIs ed64 = new EIs();
-ed64.PokazatelsId = 65;
-ed64.EI = "Не склонен";
-list2.Add(ed64);
-
-EIs ed65 = new EIs();
-ed65.PokazatelsId = 66;
-ed65.EI = "Склонен";
-list2.Add(ed65);
-
-EIs ed66 = new EIs();
-ed66.PokazatelsId = 66;
-ed66.EI = "Не склонен";
-list2.Add(ed66);
-
-EIs ed67 = new EIs();
-ed67.PokazatelsId = 67;
-ed67.EI = "Склонен";
-list2.Add(ed67);
-
-EIs ed68 = new EIs();
-ed68.PokazatelsId = 67;
-ed68.EI = "Не склонен";
-list2.Add(ed68);
-
-EIs ed69 = new EIs();
-ed69.PokazatelsId = 68;
-ed69.EI = "Склонен";
-list2.Add(ed69);
-
-EIs ed70 = new EIs();
-ed70.PokazatelsId = 68;
-ed70.EI = "Не склонен";
-list2.Add(ed70);
-
-EIs ed71 = new EIs();
-ed71.PokazatelsId = 69;
-ed71.EI = "Склонен";
-list2.Add(ed71);
-
-EIs ed72 = new EIs();
-ed72.PokazatelsId = 69;
-ed72.EI = "Не склонен";
-list2.Add(ed72);
-
-EIs ed73 = new EIs();
-ed73.PokazatelsId = 70;
-ed73.EI = "Склонен";
-list2.Add(ed73);
-
-EIs ed74 = new EIs();
-ed74.PokazatelsId = 70;
-ed74.EI = "Не склонен";
-list2.Add(ed74);
-
-EIs ed75 = new EIs();
-ed75.PokazatelsId = 71;
-ed75.EI = "Склонен";
-list2.Add(ed75);
-
-EIs ed76 = new EIs();
-ed76.PokazatelsId = 71;
-ed76.EI = "Не склонен";
-list2.Add(ed76);
-
-EIs ed77 = new EIs();
-ed77.PokazatelsId = 72;
-ed77.EI = "Склонен";
-list2.Add(ed77);
-
-EIs ed78 = new EIs();
-ed78.PokazatelsId = 72;
-ed78.EI = "Не склонен";
-list2.Add(ed78);
-
-EIs ed79 = new EIs();
-ed79.PokazatelsId = 73;
-ed79.EI = "Склонен";
-list2.Add(ed79);
-
-EIs ed80 = new EIs();
-ed80.PokazatelsId = 73;
-ed80.EI = "Не склонен";
-list2.Add(ed80);
-
-EIs ed81 = new EIs();
-ed81.PokazatelsId = 74;
-ed81.EI = "Склонен";
-list2.Add(ed81);
-
-EIs ed82 = new EIs();
-ed82.PokazatelsId = 74;
-ed82.EI = "Не склонен";
-list2.Add(ed82);
-
-EIs ed83 = new EIs();
-ed83.PokazatelsId = 75;
-ed83.EI = "Склонен";
-list2.Add(ed83);
-
-EIs ed84 = new EIs();
-ed84.PokazatelsId = 75;
-ed84.EI = "Не склонен";
-list2.Add(ed84);
-
-EIs ed85 = new EIs();
-ed85.PokazatelsId = 76;
-ed85.EI = "Склонен";
-list2.Add(ed85);
-
-EIs ed86 = new EIs();
-ed86.PokazatelsId = 76;
-ed86.EI = "Не склонен";
-list2.Add(ed86);
-
-
+list2.AddRange(СклоненНеСклонен(53));
+list2.AddRange(СклоненНеСклонен(54));
+list2.AddRange(СклоненНеСклонен(55));
+list2.AddRange(СклоненНеСклонен(56));
+list2.AddRange(СклоненНеСклонен(57));
+list2.AddRange(СклоненНеСклонен(58));
+list2.AddRange(СклоненНеСклонен(59));
+list2.AddRange(СклоненНеСклонен(60));
+list2.AddRange(СклоненНеСклонен(61));
+list2.AddRange(СклоненНеСклонен(62));
+list2.AddRange(СклоненНеСклонен(63));
+list2.AddRange(СклоненНеСклонен(64));
+list2.AddRange(СклоненНеСклонен(65));
+list2.AddRange(СклоненНеСклонен(66));
+list2.AddRange(СклоненНеСклонен(67));
+list2.AddRange(СклоненНеСклонен(68));
+list2.AddRange(СклоненНеСклонен(69));
+list2.AddRange(СклоненНеСклонен(70));
+list2.AddRange(СклоненНеСклонен(71));
+list2.AddRange(СклоненНеСклонен(72));
+list2.AddRange(СклоненНеСклонен(73));
+list2.AddRange(СклоненНеСклонен(74));
+list2.AddRange(СклоненНеСклонен(75));
+list2.AddRange(СклоненНеСклонен(76));
+list2.AddRange(СклоненНеСклонен(77));
+list2.AddRange(СклоненНеСклонен(78));
+list2.AddRange(СклоненНеСклонен(79));
+list2.AddRange(СклоненНеСклонен(80));
+list2.AddRange(СклоненНеСклонен(81));
+list2.AddRange(СклоненНеСклонен(82));
+list2.AddRange(СклоненНеСклонен(83));
+list2.AddRange(СклоненНеСклонен(84));
+list2.AddRange(СклоненНеСклонен(85));
+list2.AddRange(СклоненНеСклонен(86));
+list2.AddRange(СклоненНеСклонен(87));
+list2.AddRange(СклоненНеСклонен(88));
+list2.AddRange(СклоненНеСклонен(89));
+list2.AddRange(СклоненНеСклонен(90));
+list2.AddRange(СклоненНеСклонен(91));
+list2.AddRange(СклоненНеСклонен(92));
+list2.AddRange(СклоненНеСклонен(93));
 
 var list = list2;
 for (int i = 0; i < list.Count; i++)
@@ -1174,7 +1118,15 @@ for (int i = 0; i < list.Count; i++)
 }
 list[78].MainEI = "%";
 foreach (var item in list)
-    db.EIs.Add(item);*/
+    db.EIs.Add(item);
+
+List<EIs> СклоненНеСклонен(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "Склонен"));
+    moreEIs.Add(new EIs(id, "Не склонен"));
+    return moreEIs;
+}*/
 
 
 /*List<TypeOfTests> types = new List<TypeOfTests>();
@@ -1311,6 +1263,18 @@ TypeOfTests tests33 = new TypeOfTests();
 tests33.TypeOfTest = "Шероховатость поверхности";
 types.Add(tests33);
 
+TypeOfTests tests34 = new TypeOfTests();
+tests34.TypeOfTest = "Макроструктура";
+types.Add(tests34);
+
+TypeOfTests tests35 = new TypeOfTests();
+tests35.TypeOfTest = "МКК (АМУФ)";
+types.Add(tests35);
+
+TypeOfTests tests36 = new TypeOfTests();
+tests36.TypeOfTest = "МКК (ВУ)";
+types.Add(tests36);
+
 
 foreach (var test in types)
 {
@@ -1370,6 +1334,23 @@ listMD.AddRange(ОксидыСтрочечные(68));
 listMD.AddRange(Сульфиды(72));
 listMD.AddRange(НитридыИКарбонитриды(73));
 listMD.AddRange(МежкристаллитнаяКоррозия(75));
+listMD.AddRange(МежкристаллитнаяКоррозия(77));
+listMD.AddRange(МежкристаллитнаяКоррозия(78));
+listMD.AddRange(МежкристаллитнаяКоррозия(79));
+listMD.AddRange(МежкристаллитнаяКоррозия(80));
+listMD.AddRange(МежкристаллитнаяКоррозия(81));
+listMD.AddRange(МежкристаллитнаяКоррозия(82));
+listMD.AddRange(МежкристаллитнаяКоррозия(83));
+listMD.AddRange(МежкристаллитнаяКоррозия(84));
+listMD.AddRange(МежкристаллитнаяКоррозия(85));
+listMD.AddRange(МежкристаллитнаяКоррозия(86));
+listMD.AddRange(МежкристаллитнаяКоррозия(87));
+listMD.AddRange(МежкристаллитнаяКоррозия(88));
+listMD.AddRange(МежкристаллитнаяКоррозия(89));
+listMD.AddRange(МежкристаллитнаяКоррозия(90));
+listMD.AddRange(МежкристаллитнаяКоррозия(91));
+listMD.AddRange(МежкристаллитнаяКоррозия(92));
+listMD.AddRange(МежкристаллитнаяКоррозия(93));
 
 foreach (var item in listMD)
     db.MoreData.Add(item);
@@ -1478,6 +1459,8 @@ List<MoreData> МежкристаллитнаяКоррозия(int id)
     moreDatas.Add(new MoreData(id, "по методу E"));
     moreDatas.Add(new MoreData(id, "по методу А"));
     moreDatas.Add(new MoreData(id, "по методу АМУ"));
+    moreDatas.Add(new MoreData(id, "по методу АМУФ"));
+    moreDatas.Add(new MoreData(id, "по методу ВУ"));
     return moreDatas;
 }
 

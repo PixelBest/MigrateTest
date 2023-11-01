@@ -81,6 +81,12 @@ namespace Excel
         public int PokazatelsId { get; set; }
         public string EI { get; set; }
         public string? MainEI { get; set; }
+        public EIs(int pokazatelsId, string eI)
+        {
+            PokazatelsId = pokazatelsId;
+            EI = eI;
+        }
+        public EIs() { }
     }
 
     [Table("BaseGuid")]
