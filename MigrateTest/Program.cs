@@ -687,7 +687,7 @@ foreach (var item in list1)
     db.Pokazatels.Add(item);
 }*/
 
-/*List<EIs> list2 = new List<EIs>();
+List<EIs> list2 = new List<EIs>();
 EIs e112 = new EIs();
 e112.PokazatelsId = 1;
 e112.EI = "Н/мм2";
@@ -1070,24 +1070,25 @@ list2.AddRange(СклоненНеСклонен(55));
 list2.AddRange(СклоненНеСклонен(56));
 list2.AddRange(СклоненНеСклонен(57));
 list2.AddRange(СклоненНеСклонен(58));
-list2.AddRange(СклоненНеСклонен(59));
-list2.AddRange(СклоненНеСклонен(60));
-list2.AddRange(СклоненНеСклонен(61));
-list2.AddRange(СклоненНеСклонен(62));
-list2.AddRange(СклоненНеСклонен(63));
-list2.AddRange(СклоненНеСклонен(64));
-list2.AddRange(СклоненНеСклонен(65));
-list2.AddRange(СклоненНеСклонен(66));
-list2.AddRange(СклоненНеСклонен(67));
-list2.AddRange(СклоненНеСклонен(68));
-list2.AddRange(СклоненНеСклонен(69));
-list2.AddRange(СклоненНеСклонен(70));
-list2.AddRange(СклоненНеСклонен(71));
-list2.AddRange(СклоненНеСклонен(72));
-list2.AddRange(СклоненНеСклонен(73));
-list2.AddRange(СклоненНеСклонен(74));
+list2.AddRange(Н_мм2_кгс_мм2(59));
+list2.AddRange(Н_мм2_кгс_мм2(60));
+list2.AddRange(Процент(61));
+list2.AddRange(Процент(62));
+list2.AddRange(ЧислоТвёрдости(63));
+list2.AddRange(ОтсутствиеНаличие(64));
+list2.AddRange(ОтсутствиеНаличие(65));
+list2.AddRange(ОтсутствиеНаличие(66));
+list2.AddRange(Балл(67));
+list2.AddRange(ОтсутствиеНаличие(68));
+list2.AddRange(ОтсутствиеНаличие(69));
+list2.AddRange(ОтсутствиеНаличие(70));
+list2.AddRange(ОтсутствиеНаличие(71));
+list2.AddRange(ОтсутствиеНаличие(72));
+list2.AddRange(ОтсутствиеНаличие(73));
+list2.AddRange(Ном(74));
 list2.AddRange(СклоненНеСклонен(75));
-list2.AddRange(СклоненНеСклонен(76));
+list2.AddRange(Процент(76));
+list2.AddRange(Балл(76));
 list2.AddRange(СклоненНеСклонен(77));
 list2.AddRange(СклоненНеСклонен(78));
 list2.AddRange(СклоненНеСклонен(79));
@@ -1126,7 +1127,63 @@ List<EIs> СклоненНеСклонен(int id)
     moreEIs.Add(new EIs(id, "Склонен"));
     moreEIs.Add(new EIs(id, "Не склонен"));
     return moreEIs;
-}*/
+}
+
+List<EIs> Н_мм2_кгс_мм2(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "Н/мм2"));
+    moreEIs.Add(new EIs(id, "кгс/мм2"));
+    return moreEIs;
+}
+
+List<EIs> Процент(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "%"));
+    return moreEIs;
+}
+
+List<EIs> ЧислоТвёрдости(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "HV"));
+    moreEIs.Add(new EIs(id, "HB"));
+    moreEIs.Add(new EIs(id, "HRA"));
+    moreEIs.Add(new EIs(id, "HRB"));
+    moreEIs.Add(new EIs(id, "HRC"));
+    return moreEIs;
+}
+
+List<EIs> ОтсутствиеНаличие(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "Отсутствие"));
+    moreEIs.Add(new EIs(id, "Наличие"));
+    return moreEIs;
+}
+
+List<EIs> Балл(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "БАЛЛ"));
+    return moreEIs;
+}
+
+List<EIs> Ном(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "НОМ"));
+    return moreEIs;
+}
+
+List<EIs> СФФ(int id)
+{
+    List<EIs> moreEIs = new List<EIs>();
+    moreEIs.Add(new EIs(id, "НОМ"));
+    moreEIs.Add(new EIs(id, "НОМ"));
+    return moreEIs;
+}
 
 
 /*List<TypeOfTests> types = new List<TypeOfTests>();
@@ -1281,7 +1338,7 @@ foreach (var test in types)
     db.TypeOfTests.Add(test);
 }*/
 
-List<MoreData> listMD = new List<MoreData>();
+/*List<MoreData> listMD = new List<MoreData>();
 listMD.AddRange(ПределТекучести(1));
 listMD.AddRange(ВременноеCопротивление(2));
 listMD.AddRange(ОтносительноеУдлинение(4));
@@ -1471,6 +1528,6 @@ List<MoreData> ЧислоТвердости(int id)
     moreDatas.Add(new MoreData(id, "по Бринеллю (диаметр отпечатка)"));
     moreDatas.Add(new MoreData(id, "по Роквеллу"));
     return moreDatas;
-}
+}*/
 
 db.SaveChanges();
