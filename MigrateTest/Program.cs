@@ -211,6 +211,29 @@ g46.Gost = "ISO 3651-2:1998";
 g46.TypeOfTestsId = 36;
 list.Add(g46);
 
+list.Add(new Gosts() { Gost = "ГОСТ 5639-82", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "Методика ВНИТИ №7-95-87", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ASTM E112", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ISO 3651-2:1998", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ISO 643", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ГОСТ 5639-82", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ТИ", TypeOfTestsId = 2 });
+list.Add(new Gosts() { Gost = "ТИ", TypeOfTestsId = 3 });
+list.Add(new Gosts() { Gost = "ТИ", TypeOfTestsId = 15 });
+
+list.Add(new Gosts() { Gost = "ГОСТ 1497-84", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ 9651-84", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 10006-80", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ 10446-80", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 19040-81", TypeOfTestsId = 17 });
+
+list.Add(new Gosts() { Gost = "ГОСТ 1497-84", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ 9651-84", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 10006-80", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ 10446-80", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 19040-81", TypeOfTestsId = 37 });
+
+list.Add(new Gosts() { Gost = "ГОСТ 8694-2022", TypeOfTestsId = 38 });
 
 
 foreach (var a in list)
@@ -680,14 +703,48 @@ p93.GostsId = 46;
 p93.Pokazatel = "Межкристаллитная коррозия";
 list1.Add(p93);
 
+list1.Add(new Pokazatels() { GostsId = 47, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 48, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 49, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 50, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 51, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 52, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 53, Pokazatel = "Величина зерна" });
+list1.Add(new Pokazatels() { GostsId = 54, Pokazatel = "Величина зерна" });
+list1.AddRange(НеметаллическиеВключения(55));
+list1.Add(new Pokazatels() { GostsId = 56, Pokazatel = "Предел текучести" });
+list1.Add(new Pokazatels() { GostsId = 57, Pokazatel = "Предел текучести" });
+list1.Add(new Pokazatels() { GostsId = 58, Pokazatel = "Предел текучести" });
+list1.Add(new Pokazatels() { GostsId = 59, Pokazatel = "Предел текучести" });
+list1.Add(new Pokazatels() { GostsId = 60, Pokazatel = "Предел текучести" });
 
+list1.Add(new Pokazatels() { GostsId = 61, Pokazatel = "Относительное сужение" });
+list1.Add(new Pokazatels() { GostsId = 62, Pokazatel = "Относительное сужение" });
+list1.Add(new Pokazatels() { GostsId = 63, Pokazatel = "Относительное сужение" });
+list1.Add(new Pokazatels() { GostsId = 64, Pokazatel = "Относительное сужение" });
+list1.Add(new Pokazatels() { GostsId = 65, Pokazatel = "Относительное сужение" });
+
+list1.Add(new Pokazatels() { GostsId = 66, Pokazatel = "Трещины или надрывы с металлическим блеском" });
+
+List<Pokazatels> НеметаллическиеВключения(int id)
+{
+    List<Pokazatels> pokazatels = new List<Pokazatels>();
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Оксиды точечные" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Оксиды строчечные" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "СХ (силикаты хрупкие)" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "СП (силикаты пластичные)" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "СН (силикаты недеформирующиеся)" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Сульфиды" });
+    pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Нитриды и карбонитриды" });
+    return pokazatels;
+} 
 
 foreach (var item in list1)
 {
     db.Pokazatels.Add(item);
 }*/
 
-List<EIs> list2 = new List<EIs>();
+/*List<EIs> list2 = new List<EIs>();
 EIs e112 = new EIs();
 e112.PokazatelsId = 1;
 e112.EI = "Н/мм2";
@@ -1106,6 +1163,32 @@ list2.AddRange(СклоненНеСклонен(90));
 list2.AddRange(СклоненНеСклонен(91));
 list2.AddRange(СклоненНеСклонен(92));
 list2.AddRange(СклоненНеСклонен(93));
+list2.AddRange(Ном(94));
+list2.AddRange(Ном(95));
+list2.AddRange(Ном(96));
+list2.AddRange(Ном(97));
+list2.AddRange(Ном(98));
+list2.AddRange(Ном(99));
+list2.AddRange(Ном(100));
+list2.AddRange(Ном(101));
+list2.AddRange(Балл(102));
+list2.AddRange(Балл(103));
+list2.AddRange(Балл(104));
+list2.AddRange(Балл(105));
+list2.AddRange(Балл(106));
+list2.AddRange(Балл(107));
+list2.AddRange(Балл(108));
+list2.AddRange(Н_мм2_кгс_мм2(109));
+list2.AddRange(Н_мм2_кгс_мм2(110));
+list2.AddRange(Н_мм2_кгс_мм2(111));
+list2.AddRange(Н_мм2_кгс_мм2(112));
+list2.AddRange(Н_мм2_кгс_мм2(113));
+list2.AddRange(Процент(114));
+list2.AddRange(Процент(115));
+list2.AddRange(Процент(116));
+list2.AddRange(Процент(117));
+list2.AddRange(Процент(118));
+list2.AddRange(ОтсутствиеНаличие(119));
 
 var list = list2;
 for (int i = 0; i < list.Count; i++)
@@ -1183,7 +1266,7 @@ List<EIs> СФФ(int id)
     moreEIs.Add(new EIs(id, "НОМ"));
     moreEIs.Add(new EIs(id, "НОМ"));
     return moreEIs;
-}
+}*/
 
 
 /*List<TypeOfTests> types = new List<TypeOfTests>();
@@ -1332,13 +1415,15 @@ TypeOfTests tests36 = new TypeOfTests();
 tests36.TypeOfTest = "МКК (ВУ)";
 types.Add(tests36);
 
+types.Add(new TypeOfTests() { TypeOfTest = "Сужение" });
+types.Add(new TypeOfTests() { TypeOfTest = "Раздача до разрушения" });
 
 foreach (var test in types)
 {
     db.TypeOfTests.Add(test);
 }*/
 
-/*List<MoreData> listMD = new List<MoreData>();
+List<MoreData> listMD = new List<MoreData>();
 listMD.AddRange(ПределТекучести(1));
 listMD.AddRange(ВременноеCопротивление(2));
 listMD.AddRange(ОтносительноеУдлинение(4));
@@ -1408,6 +1493,20 @@ listMD.AddRange(МежкристаллитнаяКоррозия(90));
 listMD.AddRange(МежкристаллитнаяКоррозия(91));
 listMD.AddRange(МежкристаллитнаяКоррозия(92));
 listMD.AddRange(МежкристаллитнаяКоррозия(93));
+listMD.AddRange(ОксидыТочечные(102));
+listMD.AddRange(ОксидыСтрочечные(103));
+listMD.AddRange(Сульфиды(107));
+listMD.AddRange(НитридыИКарбонитриды(108));
+listMD.AddRange(ПределТекучести(109));
+listMD.AddRange(ПределТекучести(110));
+listMD.AddRange(ПределТекучести(111));
+listMD.AddRange(ПределТекучести(112));
+listMD.AddRange(ПределТекучести(113));
+listMD.AddRange(ОтносительноеСужение(114));
+listMD.AddRange(ОтносительноеСужение(115));
+listMD.AddRange(ОтносительноеСужение(116));
+listMD.AddRange(ОтносительноеСужение(117));
+listMD.AddRange(ОтносительноеСужение(118));
 
 foreach (var item in listMD)
     db.MoreData.Add(item);
@@ -1528,6 +1627,6 @@ List<MoreData> ЧислоТвердости(int id)
     moreDatas.Add(new MoreData(id, "по Бринеллю (диаметр отпечатка)"));
     moreDatas.Add(new MoreData(id, "по Роквеллу"));
     return moreDatas;
-}*/
+}
 
 db.SaveChanges();
