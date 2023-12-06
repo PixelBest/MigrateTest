@@ -730,6 +730,13 @@ list1.Add(new Pokazatels() { GostsId = 14, Pokazatel = "Кислородные �
 list1.Add(new Pokazatels() { GostsId = 19, Pokazatel = "Кислородные включения" });
 list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "Кислородные включения" });
 
+list1.Add(new Pokazatels() { GostsId = 14, Pokazatel = "НС (нитриды строчечные)" });
+list1.Add(new Pokazatels() { GostsId = 14, Pokazatel = "НТ (нитриды  точечные)" });
+list1.Add(new Pokazatels() { GostsId = 19, Pokazatel = "НС (нитриды строчечные)" });
+list1.Add(new Pokazatels() { GostsId = 19, Pokazatel = "НТ (нитриды  точечные)" });
+list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "НС (нитриды строчечные)" });
+list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "НТ (нитриды  точечные)" });
+
 List<Pokazatels> НеметаллическиеВключения(int id)
 {
     List<Pokazatels> pokazatels = new List<Pokazatels>();
@@ -748,7 +755,7 @@ foreach (var item in list1)
     db.Pokazatels.Add(item);
 }*/
 
-/*List<EIs> list2 = new List<EIs>();
+List<EIs> list2 = new List<EIs>();
 EIs e112 = new EIs();
 e112.PokazatelsId = 1;
 e112.EI = "Н/мм2";
@@ -1196,6 +1203,12 @@ list2.AddRange(ОтсутствиеНаличие(119));
 list2.AddRange(Балл(120));
 list2.AddRange(Балл(121));
 list2.AddRange(Балл(122));
+list2.AddRange(Балл(123));
+list2.AddRange(Балл(124));
+list2.AddRange(Балл(125));
+list2.AddRange(Балл(126));
+list2.AddRange(Балл(127));
+list2.AddRange(Балл(128));
 
 var list = list2;
 for (int i = 0; i < list.Count; i++)
@@ -1273,7 +1286,7 @@ List<EIs> СФФ(int id)
     moreEIs.Add(new EIs(id, "НОМ"));
     moreEIs.Add(new EIs(id, "НОМ"));
     return moreEIs;
-}*/
+}
 
 
 /*List<TypeOfTests> types = new List<TypeOfTests>();
@@ -1430,7 +1443,7 @@ foreach (var test in types)
     db.TypeOfTests.Add(test);
 }*/
 
-List<MoreData> listMD = new List<MoreData>();
+/*List<MoreData> listMD = new List<MoreData>();
 listMD.AddRange(ПределТекучести(1));
 listMD.AddRange(ВременноеCопротивление(2));
 listMD.AddRange(ОтносительноеУдлинение(4));
@@ -1645,6 +1658,6 @@ List<MoreData> КислородныеВключения(int id)
     moreDatas.Add(new MoreData(id, "глобулярные"));
     moreDatas.Add(new MoreData(id, "строчечные"));
     return moreDatas;
-}
+}*/
 
 db.SaveChanges();
