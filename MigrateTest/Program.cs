@@ -32,7 +32,7 @@ g6.TypeOfTestsId = 20;
 list.Add(g6);
 Gosts g7 = new Gosts();
 g7.Gost = "ГОСТ 9012-59";
-g7.TypeOfTestsId = 19;
+g7.TypeOfTestsId = 22;
 list.Add(g7);
 Gosts g8 = new Gosts();
 g8.Gost = "ГОСТ 9013-59";
