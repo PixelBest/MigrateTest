@@ -726,6 +726,10 @@ list1.Add(new Pokazatels() { GostsId = 65, Pokazatel = "Относительно
 
 list1.Add(new Pokazatels() { GostsId = 66, Pokazatel = "Трещины или надрывы с металлическим блеском" });
 
+list1.Add(new Pokazatels() { GostsId = 14, Pokazatel = "Кислородные включения" });
+list1.Add(new Pokazatels() { GostsId = 19, Pokazatel = "Кислородные включения" });
+list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "Кислородные включения" });
+
 List<Pokazatels> НеметаллическиеВключения(int id)
 {
     List<Pokazatels> pokazatels = new List<Pokazatels>();
@@ -737,7 +741,7 @@ List<Pokazatels> НеметаллическиеВключения(int id)
     pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Сульфиды" });
     pokazatels.Add(new Pokazatels() { GostsId = id, Pokazatel = "Нитриды и карбонитриды" });
     return pokazatels;
-} 
+}
 
 foreach (var item in list1)
 {
@@ -1189,6 +1193,9 @@ list2.AddRange(Процент(116));
 list2.AddRange(Процент(117));
 list2.AddRange(Процент(118));
 list2.AddRange(ОтсутствиеНаличие(119));
+list2.AddRange(Балл(120));
+list2.AddRange(Балл(121));
+list2.AddRange(Балл(122));
 
 var list = list2;
 for (int i = 0; i < list.Count; i++)
@@ -1507,6 +1514,9 @@ listMD.AddRange(ОтносительноеСужение(115));
 listMD.AddRange(ОтносительноеСужение(116));
 listMD.AddRange(ОтносительноеСужение(117));
 listMD.AddRange(ОтносительноеСужение(118));
+listMD.AddRange(КислородныеВключения(120));
+listMD.AddRange(КислородныеВключения(121));
+listMD.AddRange(КислородныеВключения(122));
 
 foreach (var item in listMD)
     db.MoreData.Add(item);
@@ -1626,6 +1636,14 @@ List<MoreData> ЧислоТвердости(int id)
     moreDatas.Add(new MoreData(id, "по Бринеллю"));
     moreDatas.Add(new MoreData(id, "по Бринеллю (диаметр отпечатка)"));
     moreDatas.Add(new MoreData(id, "по Роквеллу"));
+    return moreDatas;
+}
+
+List<MoreData> КислородныеВключения(int id)
+{
+    List<MoreData> moreDatas = new List<MoreData>();
+    moreDatas.Add(new MoreData(id, "глобулярные"));
+    moreDatas.Add(new MoreData(id, "строчечные"));
     return moreDatas;
 }
 
