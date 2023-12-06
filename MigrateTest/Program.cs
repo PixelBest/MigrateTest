@@ -1292,7 +1292,7 @@ tests5.TypeOfTest = "Загиб";
 types.Add(tests5);
 
 TypeOfTests tests6 = new TypeOfTests();
-tests6.TypeOfTest = "Загрязн. немет. включениями";
+tests6.TypeOfTest = "Неметаллические включения";
 types.Add(tests6);
 
 TypeOfTests tests7 = new TypeOfTests();
@@ -1328,7 +1328,7 @@ tests14.TypeOfTest = "Микроструктура";
 types.Add(tests14);
 
 TypeOfTests tests15 = new TypeOfTests();
-tests15.TypeOfTest = "Неметаллические включения";
+tests15.TypeOfTest = "Загрязн. немет. включениями";
 types.Add(tests15);
 
 TypeOfTests tests16 = new TypeOfTests();
