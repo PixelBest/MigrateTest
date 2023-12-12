@@ -137,7 +137,7 @@ g172.TypeOfTestsId = 11;
 list.Add(g172);
 
 Gosts g173 = new Gosts();
-g173.Gost = "РД 2.200.15-90";
+g173.Gost = "РД 24.200.15-90";
 g173.TypeOfTestsId = 12;
 list.Add(g173);
 
@@ -182,12 +182,12 @@ g40.TypeOfTestsId = 36;
 list.Add(g40);
 
 Gosts g41 = new Gosts();
-g41.Gost = "РД 2.200.15-90";
+g41.Gost = "РД 24.200.15-90";
 g41.TypeOfTestsId = 35;
 list.Add(g41);
 
 Gosts g42 = new Gosts();
-g42.Gost = "РД 2.200.15-90";
+g42.Gost = "РД 24.200.15-90";
 g42.TypeOfTestsId = 36;
 list.Add(g42);
 
