@@ -71,7 +71,7 @@ g16.Gost = "ГОСТ 6032-2017";
 g16.TypeOfTestsId = 9;
 list.Add(g16);
 Gosts g17 = new Gosts();
-g17.Gost = "РД 2.200.15-90";
+g17.Gost = "РД 24.200.15-90";
 g17.TypeOfTestsId = 9;
 list.Add(g17);
 Gosts g18 = new Gosts();
@@ -127,12 +127,12 @@ g163.TypeOfTestsId = 12;
 list.Add(g163);
 
 Gosts g171 = new Gosts();
-g171.Gost = "РД 2.200.15-90";
+g171.Gost = "РД 24.200.15-90";
 g171.TypeOfTestsId = 10;
 list.Add(g171);
 
 Gosts g172 = new Gosts();
-g172.Gost = "РД 2.200.15-90";
+g172.Gost = "РД 24.200.15-90";
 g172.TypeOfTestsId = 11;
 list.Add(g172);
 
@@ -223,15 +223,15 @@ list.Add(new Gosts() { Gost = "ТИ", TypeOfTestsId = 15 });
 
 list.Add(new Gosts() { Gost = "ГОСТ 1497-84", TypeOfTestsId = 17 });
 list.Add(new Gosts() { Gost = "ГОСТ 9651-84", TypeOfTestsId = 17 });
-list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 10006-80", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ 10006-80", TypeOfTestsId = 17 });
 list.Add(new Gosts() { Gost = "ГОСТ 10446-80", TypeOfTestsId = 17 });
-list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 19040-81", TypeOfTestsId = 17 });
+list.Add(new Gosts() { Gost = "ГОСТ 19040-81", TypeOfTestsId = 17 });
 
 list.Add(new Gosts() { Gost = "ГОСТ 1497-84", TypeOfTestsId = 37 });
 list.Add(new Gosts() { Gost = "ГОСТ 9651-84", TypeOfTestsId = 37 });
-list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 10006-80", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ 10006-80", TypeOfTestsId = 37 });
 list.Add(new Gosts() { Gost = "ГОСТ 10446-80", TypeOfTestsId = 37 });
-list.Add(new Gosts() { Gost = "ГОСТ ГОСТ 19040-81", TypeOfTestsId = 37 });
+list.Add(new Gosts() { Gost = "ГОСТ 19040-81", TypeOfTestsId = 37 });
 
 list.Add(new Gosts() { Gost = "ГОСТ 8694-2022", TypeOfTestsId = 38 });
 
@@ -737,6 +737,10 @@ list1.Add(new Pokazatels() { GostsId = 19, Pokazatel = "НТ (нитриды  т
 list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "НС (нитриды строчечные)" });
 list1.Add(new Pokazatels() { GostsId = 55, Pokazatel = "НТ (нитриды  точечные)" });
 
+list1.Add(new Pokazatels() { GostsId = 25, Pokazatel = "НС (нитриды строчечные)" });
+list1.Add(new Pokazatels() { GostsId = 25, Pokazatel = "НТ (нитриды  точечные)" });
+list1.Add(new Pokazatels() { GostsId = 25, Pokazatel = "Отношение предела текучести к временному сопротивллению" });
+list1.Add(new Pokazatels() { GostsId = 25, Pokazatel = "Кислородные включения" });
 List<Pokazatels> НеметаллическиеВключения(int id)
 {
     List<Pokazatels> pokazatels = new List<Pokazatels>();
@@ -1128,8 +1132,10 @@ list2.Add(e381381);
 
 EIs e44 = new EIs();
 e44.PokazatelsId = 52;
-e44.EI = "НОМ";
+e44.EI = "%";
 list2.Add(e44);
+
+list2.Add(new EIs() { PokazatelsId = 52, EI = "БАЛЛ" });
 
 
 list2.AddRange(СклоненНеСклонен(53));
@@ -1209,6 +1215,9 @@ list2.AddRange(Балл(125));
 list2.AddRange(Балл(126));
 list2.AddRange(Балл(127));
 list2.AddRange(Балл(128));
+list2.AddRange(Балл(129));
+list2.AddRange(Балл(130));
+list2.AddRange(Балл(132));
 
 var list = list2;
 for (int i = 0; i < list.Count; i++)
@@ -1220,7 +1229,7 @@ for (int i = 0; i < list.Count; i++)
     if (list[i].EI == "Не склонен")
         list[i].MainEI = "Не склонен";
 }
-list[78].MainEI = "%";
+list[73].MainEI = "%";
 foreach (var item in list)
     db.EIs.Add(item);
 
@@ -1530,6 +1539,7 @@ listMD.AddRange(ОтносительноеСужение(118));
 listMD.AddRange(КислородныеВключения(120));
 listMD.AddRange(КислородныеВключения(121));
 listMD.AddRange(КислородныеВключения(122));
+listMD.AddRange(КислородныеВключения(132));
 
 foreach (var item in listMD)
     db.MoreData.Add(item);
@@ -1588,14 +1598,12 @@ List<MoreData> ОтносительноеСужение(int id)
 {
     List<MoreData> moreDatas = new List<MoreData>();
     moreDatas.Add(new MoreData(id, "t=20С"));
-    moreDatas.Add(new MoreData(id, "t=100С"));
-    moreDatas.Add(new MoreData(id, "t=190С"));
+    moreDatas.Add(new MoreData(id, "t=150С"));
     moreDatas.Add(new MoreData(id, "t=200С"));
     moreDatas.Add(new MoreData(id, "t=250С"));
     moreDatas.Add(new MoreData(id, "t=350С"));
-    moreDatas.Add(new MoreData(id, "t=375С"));
+    moreDatas.Add(new MoreData(id, "t=400С"));
     moreDatas.Add(new MoreData(id, "t=500С"));
-    moreDatas.Add(new MoreData(id, "t=650С"));
     return moreDatas;
 }
 
