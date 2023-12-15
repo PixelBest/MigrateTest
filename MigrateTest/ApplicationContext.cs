@@ -71,8 +71,6 @@ namespace Excel
         public int GostsId { get; set; }
         public string Pokazatel { get; set; }
 
-        public ObservableCollection<EIs> EIs { get; set; }
-
     }
     
     public class EIs
